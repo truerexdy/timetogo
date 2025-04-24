@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func Sqrt(x float64) float64 {
@@ -40,5 +41,8 @@ func main() {
 	var num float64
 	fmt.Println("Enter a number:")
 	fmt.Scanf("%f", &num)
+	start := time.Now()
 	fmt.Println(Sqrt(num))
+	duration := time.Since(start)
+	fmt.Println("Exec Time = ", duration)
 }
